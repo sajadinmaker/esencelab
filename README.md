@@ -75,3 +75,9 @@ No published benchmarks. Only thresholds (e.g. slow-endpoint 1200ms, p95 alert 2
 ## Future Improvements
 
 Split API into routes/services/stores; harden RLS or document managed-PG choice; add queue for AI calls; external observability; expand tests beyond RBAC/smoke.
+
+---
+
+## Maintenance
+
+Last maintained: 2026-09-30 – minor docs touch.

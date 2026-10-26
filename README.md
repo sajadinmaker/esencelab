@@ -1,5 +1,7 @@
 # EsenceLab
 
+[![CI](https://github.com/sajadinmaker/esencelab/actions/workflows/ci.yml/badge.svg)](https://github.com/sajadinmaker/esencelab/actions/workflows/ci.yml)
+
 Hiring loop: resume in, structured skills out, job match + recruiter shortlist.
 
 ## Problem
@@ -80,4 +82,4 @@ Split API into routes/services/stores; harden RLS or document managed-PG choice;
 
 ## Maintenance
 
-Last maintained: 2026-09-30 – minor docs touch.
+Last maintained: 2026-10-26 – CI audit gate fixed (backend 0 vulns, frontend audits shipped deps); stale path in PRODUCT.md corrected; all service builds re-verified.

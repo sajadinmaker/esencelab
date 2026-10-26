@@ -62,7 +62,10 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - run: npm audit --audit-level=moderate
+      # Audit shipped dependencies only: the dev tree (tailwind/eslint chains)
+      # carries advisories that fix under a breaking tailwind v4 jump. Matches
+      # docs/RUNBOOK.md's audit command.
+      - run: npm audit --omit=dev --audit-level=moderate
 
   ai-service:
     name: AI service

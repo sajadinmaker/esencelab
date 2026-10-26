@@ -1,7 +1,7 @@
 # EsenceLab — Product Documentation
 
 > User-serving product guide (technical deep docs already in `docs/`).
-> Codebase: `/home/sajad/Projects/portfolio/esencelab` | Stack: Next.js + Express + FastAPI AI + Supabase PG | Deploy: Vercel + Render
+> Codebase: `/home/sajad/esencelab` | Stack: Next.js + Express + FastAPI AI + Supabase PG | Deploy: Vercel + Render
 
 ## 1. What this product is
 

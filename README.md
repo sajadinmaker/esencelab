@@ -21,6 +21,12 @@ A hiring product in three deployables: Next.js frontend, Express API with JWT au
 - `backend/test/rbac-smoke.test.js` — the RBAC contract that fails when authorization loosens
 - `scripts/verify-supabase-schema.js` — schema contract checked in CI
 
+## Demo
+
+![EsenceLab resume parse demo](ai-service/docs/demo.gif)
+
+Recorded live: the FastAPI service boots, a synthetic sample resume (`ai-service/docs/demo_resume.pdf`) is uploaded to `/ai/parse-resume`, and the parser returns structured JSON — name, education, experience, and skill extraction — with no API key needed locally.
+
 ## Problem
 
 Students can't map resumes to skill gaps; recruiters screen manually; admins lack one control surface.

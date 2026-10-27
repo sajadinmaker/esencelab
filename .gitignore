@@ -12,6 +12,8 @@ build/
 
 uploads/
 *.pdf
+# whitelisted synthetic demo asset referenced by the README demo
+!ai-service/docs/demo_resume.pdf
 .vercel/
 data/*.db
 

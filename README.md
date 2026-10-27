@@ -2,7 +2,24 @@
 
 [![CI](https://github.com/sajadinmaker/esencelab/actions/workflows/ci.yml/badge.svg)](https://github.com/sajadinmaker/esencelab/actions/workflows/ci.yml)
 
-Hiring loop: resume in, structured skills out, job match + recruiter shortlist.
+**Resume in, structured skills out, job match computed, recruiter shortlist right behind it.**
+
+A hiring product in three deployables: Next.js frontend, Express API with JWT auth and RBAC, and a FastAPI service that parses resumes and matches them to jobs. Deterministic scoring first (skill overlap × 0.55 + TF-IDF × 0.45) with an optional LLM assist (Groq) and a local fallback, so the product works with or without an AI key.
+
+| | |
+|---|---|
+| Stack | TypeScript, Next.js, Express, FastAPI, PostgreSQL (Supabase managed), Docker |
+| Auth | JWT + RBAC (student / recruiter / admin), bcrypt, request IDs |
+| AI | `/ai/parse-resume` and `/ai/match` with internal service token; deterministic fallback |
+| CI | Four jobs: schema contract, backend, frontend, AI service |
+| Deploy | Per-service Dockerfiles + `render.yaml` + Vercel frontend |
+
+**Where to look first**
+
+- `backend/src/index.ts` — the production API (~6K lines); `docs/ARCHITECTURE.md` maps the planned split into routes, services, and stores
+- `ai-service/app/main.py` — resume parse and job match endpoints with graceful local fallback
+- `backend/test/rbac-smoke.test.js` — the RBAC contract that fails when authorization loosens
+- `scripts/verify-supabase-schema.js` — schema contract checked in CI
 
 ## Problem
 
